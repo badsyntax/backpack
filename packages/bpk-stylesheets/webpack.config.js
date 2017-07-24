@@ -20,6 +20,9 @@ const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const postCssFlexbugsFixes = require('postcss-flexbugs-fixes');
+const WrapperPlugin = require('wrapper-webpack-plugin');
+
+const LICENSE = require('bpk-tokens');
 
 module.exports = {
   entry: {
@@ -45,12 +48,14 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
+                minimize: true,
                 importLoaders: 1,
               },
             },
             {
               loader: 'postcss-loader',
               options: {
+                minimize: true,
                 plugins: () => [
                   postCssFlexbugsFixes,
                   autoprefixer({
@@ -79,12 +84,14 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
+                minimize: true,
                 importLoaders: 1,
               },
             },
             {
               loader: 'postcss-loader',
               options: {
+                minimize: true,
                 plugins: () => [
                   postCssFlexbugsFixes,
                   autoprefixer({
@@ -106,6 +113,10 @@ module.exports = {
   },
 
   plugins: [
+    new WrapperPlugin({
+      test: /\.css$/,
+      header: LICENSE.TEXT,
+    }),
     new ExtractTextPlugin({
       filename: 'base.css',
     }),
