@@ -1,0 +1,26 @@
+{
+  "name": "bpk-component-tour",
+  "version": "2.2.4",
+  "description": "Backpack tour component.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Skyscanner/backpack.git"
+  },
+  "author": "Backpack Design System <backpack@skyscanner.net>",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0"
+  },
+  "dependencies": {
+    "bpk-component-popover": "^2.2.4",
+    "bpk-mixins": "^17.11.31",
+    "bpk-react-utils": "^2.7.0",
+    "bpk-scrim-utils": "^3.2.34",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "bpk-component-button": "^2.1.36",
+    "bpk-component-text": "^1.0.96"
+  }
+}

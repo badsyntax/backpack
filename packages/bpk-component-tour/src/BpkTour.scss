@@ -16,10 +16,40 @@
  * limitations under the License.
  */
 
-import withScrim from './src/withScrim';
-import BpkScrim from './src/BpkScrim';
+ @import '~bpk-mixins';
 
-export { withScrim, BpkScrim };
-export default {
-  withScrim,
-};
+ .bpk-tour-step-target {
+    &--active {
+        z-index: 1100;
+        position: relative;
+    }
+ }
+ 
+.bpk-tour-portal {
+    z-index: 1100;
+}
+
+.bpk-tour-root-node--active {
+  scroll-behavior: smooth;
+}
+
+.bpk-tour-popover {
+  &__footer {
+    box-shadow: none;
+    padding: $bpk-spacing-sm 0 0 0;
+    text-align: right;
+    color: $bpk-color-gray-500;
+  }
+  
+  &__button-prev {
+    &--has-next {
+      margin-right: $bpk-spacing-xs;
+    }
+  }
+
+  &__button-next {
+    &--has-prev {
+      margin-left: $bpk-spacing-xs;
+    }
+  }
+}

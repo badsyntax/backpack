@@ -16,10 +16,6 @@
  * limitations under the License.
  */
 
-import withScrim from './src/withScrim';
-import BpkScrim from './src/BpkScrim';
+/* @flow */
 
-export { withScrim, BpkScrim };
-export default {
-  withScrim,
-};
+export { default } from './src/BpkTour';

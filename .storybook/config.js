@@ -112,6 +112,7 @@ configure(() => {
   require('./../packages/bpk-component-ticket/stories');
   require('./../packages/bpk-component-tile/stories');
   require('./../packages/bpk-component-tooltip/stories');
+  require('./../packages/bpk-component-tour/stories');
   require('./../packages/bpk-mixins/stories');
 }, module);
 /* eslint-enable */
